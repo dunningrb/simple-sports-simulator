@@ -1,0 +1,129 @@
+Association Football:
+  name: English Premier League
+  season: 2020-21
+  avg_shots: 11.913   # per game
+  goal_pct: 0.11516       # per shot
+  home_adj: 1
+  rotations: 2
+  results_file: ./epl-2020-21-results.txt
+
+  teams:
+    Manchester City:
+      avg_shots_for: 16.32
+      goal_pct_for: 0.115808824
+      avg_shots_against: 7.53
+      goal_pct_against: 0.120535714
+
+    Manchester United:
+      avg_shots_for: 13.85
+      goal_pct_for: 0.133574007
+      avg_shots_against: 11.2
+      goal_pct_against: 0.120535714
+
+    Leicester:
+      avg_shots_for: 12
+      goal_pct_for: 0.15
+      avg_shots_against: 10.4
+      goal_pct_against: 0.105769231
+
+    Liverpool:
+      avg_shots_for: 16
+      goal_pct_for: 0.125
+      avg_shots_against: 7.95
+      goal_pct_against: 0.144654088
+
+    West Ham United:
+      avg_shots_for: 12.35
+      goal_pct_for: 0.12145749
+      avg_shots_against: 10.45
+      goal_pct_against: 0.114832536
+
+    Tottenham_Hotspur:
+      avg_shots_for: 11.26
+      goal_pct_for: 0.158969805
+      avg_shots_against: 13.32
+      goal_pct_against: 0.078828829
+      
+    Everton:
+      avg_shots_for: 10.44
+      goal_pct_for: 0.154214559
+      avg_shots_against: 12.56
+      goal_pct_against: 0.097133758
+      
+    Chelsea:
+      avg_shots_for: 13.85
+      goal_pct_for: 0.119133574
+      avg_shots_against: 9.75
+      goal_pct_against: 0.117948718
+      
+    Arsenal:
+      avg_shots_for: 11.65
+      goal_pct_for: 0.111587983
+      avg_shots_against: 11.5
+      goal_pct_against: 0.086956522
+      
+    Aston_Villa:
+      avg_shots_for: 15.17
+      goal_pct_for: 0.120632828
+      avg_shots_against: 12.39
+      goal_pct_against: 0.094430993
+      
+    Southampton:
+      avg_shots_for: 10.21
+      goal_pct_for: 0.139079334
+      avg_shots_against: 10.47
+      goal_pct_against: 0.12034384
+      
+    Leeds United:
+      avg_shots_for: 14.47
+      goal_pct_for: 0.116102281
+      avg_shots_against: 14.79
+      goal_pct_against: 0.124408384
+      
+    Wolverhamptom:
+      avg_shots_for: 12.2
+      goal_pct_for: 0.086065574
+      avg_shots_against: 10.75
+      goal_pct_against: 0.134883721
+      
+    Crystal Palace:
+      avg_shots_for: 9.35
+      goal_pct_for: 0.128342246
+      avg_shots_against: 13.25
+      goal_pct_against: 0.135849057
+      
+    Burnley:
+      avg_shots_for: 9.11
+      goal_pct_for: 0.074643249
+      avg_shots_against: 14.84
+      goal_pct_against: 0.08490566
+      
+    Newcastle United:
+      avg_shots_for: 9.15
+      goal_pct_for: 0.103825137
+      avg_shots_against: 14.9
+      goal_pct_against: 0.11409396
+      
+    Brighton and Hove Albion:
+      avg_shots_for: 12.2
+      goal_pct_for: 0.090163934
+      avg_shots_against: 9.15
+      goal_pct_against: 0.158469945
+      
+    Fulham:
+      avg_shots_for: 11.53
+      goal_pct_for: 0.068516912
+      avg_shots_against: 12.79
+      goal_pct_against: 0.111024238
+      
+    West Bromwich Albion:
+      avg_shots_for: 8.05
+      goal_pct_for: 0.093167702
+      avg_shots_against: 16.55
+      goal_pct_against: 0.145015106
+      
+    Sheffield United:
+      avg_shots_for: 9.1
+      goal_pct_for: 0.065934066
+      avg_shots_against: 13.7
+      goal_pct_against: 0.120437956

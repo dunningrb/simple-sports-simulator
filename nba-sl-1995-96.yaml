@@ -1,0 +1,127 @@
+Basketball:
+  name: NBA Super League
+  season: 1995-96
+  a3p: 16.000
+  p3p: 0.367
+  a2p: 64.100
+  p2p: 0.486
+  aft: 26.4
+  pft: 0.740
+  rotations: 12
+  home_a3p_adj: 2
+  home_a2p_adj: 4
+  home_aft_adj: 3
+  results_file: ./nba-sl-1995-96-results.txt
+
+  teams:
+    Chicago Bulls:
+      a3p_for: 16.5
+      p3p_for: 0.403
+      a2p_for: 67.6
+      p2p_for: 0.496
+      aft_for: 24.4
+      pft_for: 0.746
+      a3p_against: 16.1
+      p3p_against: 0.388
+      a2p_against: 54.5
+      p2p_against: 0.484
+      aft_against: 22.5
+      pft_against: 0.759
+
+    Seattle SuperSonics:
+      a3p_for: 19.5
+      p3p_for: 0.364
+      a2p_for: 58.6
+      p2p_for: 0.519
+      aft_for: 29.6
+      pft_for: 0.76
+      a3p_against: 16.8
+      p3p_against: 0.366
+      a2p_against: 60.9
+      p2p_against: 0.465
+      aft_against: 24.9
+      pft_against: 0.715
+
+    Orlando Magic:
+      a3p_for: 20.1
+      p3p_for: 0.378
+      a2p_for: 60.9
+      p2p_for: 0.517
+      aft_for: 27.2
+      pft_for: 0.691
+      a3p_against: 15.2
+      p3p_against: 0.35
+      a2p_against: 63.2
+      p2p_against: 0.472
+      aft_against: 24.2
+      pft_against: 0.717
+
+    San Antonio Spurs:
+      a3p_for: 16.1
+      p3p_for: 0.392
+      a2p_for: 64.4
+      p2p_for: 0.498
+      aft_for: 27.6
+      pft_for: 0.736
+      a3p_against: 17.4
+      p3p_against: 0.385
+      a2p_against: 57.9
+      p2p_against: 0.463
+      aft_against: 29.5
+      pft_against: 0.751
+
+    Los Angeles Lakers:
+      a3p_for: 16.6
+      p3p_for: 0.351
+      a2p_for: 65.2
+      p2p_for: 0.512
+      aft_for: 25
+      pft_for: 0.746
+      a3p_against: 16.7
+      p3p_against: 0.360
+      a2p_against: 60
+      p2p_against: 0.477
+      aft_against: 28.1
+      pft_against: 0.740
+
+    Utah Jazz:
+      a3p_for: 12.4
+      p3p_for: 0.372
+      a2p_for: 65.9
+      p2p_for: 0.509
+      aft_for: 28.1
+      pft_for: 0.768
+      a3p_against: 17.3
+      p3p_against: 0.384
+      a2p_against: 63.5
+      p2p_against: 0.473
+      aft_against: 24.3
+      pft_against: 0.740
+
+    Indiana Pacers:
+      a3p_for: 11.9
+      p3p_for: 0.373
+      a2p_for: 63.8
+      p2p_for: 0.5
+      aft_for: 29.5
+      pft_for: 0.755
+      a3p_against: 16.4
+      p3p_against: 0.359
+      a2p_against: 67.9
+      p2p_against: 0.484
+      aft_against: 24.5
+      pft_against: 0.707
+
+    New York Knicks:
+      a3p_for: 15.7
+      p3p_for: 0.377
+      a2p_for: 62.2
+      p2p_for: 0.494
+      aft_for: 23.8
+      pft_for: 0.757
+      a3p_against: 16
+      p3p_against: 0.365
+      a2p_against: 66.4
+      p2p_against: 0.501
+      aft_against: 25.6
+      pft_against: 0.746

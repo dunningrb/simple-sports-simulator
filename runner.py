@@ -11,12 +11,17 @@ import sys
 from benedict import benedict
 
 from association_football.association_football import AssociationFootballLeague
+from basketball.basketball import BasketballLeague
+from hockey.hockey import HockeyLeague
 
 
 def play(params):
     sport = list(params.keys())[0]
 
-    {'association football': AssociationFootballLeague}[sport.lower()](**params[sport])
+    {'association football': AssociationFootballLeague,
+     'hockey': HockeyLeague,
+     'basketball': BasketballLeague
+     }[sport.lower()](**params[sport])
 
 
 

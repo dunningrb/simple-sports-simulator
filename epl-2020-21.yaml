@@ -38,7 +38,7 @@ Association Football:
       avg_shots_against: 10.45
       goal_pct_against: 0.114832536
 
-    Tottenham_Hotspur:
+    Tottenham Hotspur:
       avg_shots_for: 11.26
       goal_pct_for: 0.158969805
       avg_shots_against: 13.32
@@ -62,7 +62,7 @@ Association Football:
       avg_shots_against: 11.5
       goal_pct_against: 0.086956522
       
-    Aston_Villa:
+    Aston Villa:
       avg_shots_for: 15.17
       goal_pct_for: 0.120632828
       avg_shots_against: 12.39

@@ -1,0 +1,45 @@
+Hockey:
+  name: National Hockey League
+  season: 1962-63
+  avg_shots: 31.814    # per game
+  goal_pct: 0.093399   # per shot
+  rotations: 14
+  home_adj: 3
+  results_file: ./nhl-1962-63-results.txt
+
+  teams:
+    Toronto Maple Leafs:
+      avg_shots_for: 33.428
+      goal_pct_for: 0.094444
+      avg_shots_against: 27.957
+      goal_pct_against: 0.091978
+
+    Chicago Black Hawks:
+      avg_shots_for: 31.071
+      goal_pct_for: 0.089195
+      avg_shots_against: 30.528
+      goal_pct_against: 0.083333
+
+    Montreal Canadiens:
+      avg_shots_for: 34.757
+      goal_pct_for: 0.092478
+      avg_shots_against: 28.529
+      goal_pct_against: 0.091637
+
+    Detroit Red Wings:
+      avg_shots_for: 35.014
+      goal_pct_for: 0.081599
+      avg_shots_against: 29.300
+      goal_pct_against: 0.094588
+
+    New York Rangers:
+      avg_shots_for: 28.257
+      goal_pct_for: 0.106673
+      avg_shots_against: 37.971
+      goal_pct_against: 0.0876599
+
+    Boston Bruins:
+      avg_shots_for: 28.371
+      goal_pct_for: 0.0996979
+      avg_shots_against: 36.614
+      goal_pct_against: 0.10964

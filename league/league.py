@@ -108,6 +108,7 @@ class League:
         allowed_options = list()
 
         menu = (f'\n{"*" * 100}'
+                f'\n{self.season} {self.name}\n'
                 f'\nEnter your selection:')
 
         for key, option_name in enumerate(self.option_methods, 1):

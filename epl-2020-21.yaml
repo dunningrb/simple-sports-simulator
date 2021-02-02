@@ -2,7 +2,7 @@ Association Football:
   name: English Premier League
   season: 2020-21
   avg_shots: 11.913   # per game
-  goal_pct: 0.11516       # per shot
+  goal_pct: 0.11516   # per shot
   home_adj: 1
   rotations: 2
   results_file: ./epl-2020-21-results.txt

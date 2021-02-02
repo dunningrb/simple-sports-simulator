@@ -20,9 +20,6 @@ LOG_FILEPATH = f'{LOG_PATH}/log.log'
 LOG_DEFAULT = {'logfilepath': LOG_FILEPATH}  # defaults dict for logging.config.fileConfig().
 
 SCHEDULE_TABLES = {
-    (1, 2):
-        {1: 'A-B', 2: 'B-A', 3: 'A-B', 4: 'B-A', 5: 'A-B', 6: 'B-A',
-         7: 'A-B', 8: 'B-A', 9: 'A-B', 10: 'B-A', 11: 'A-B', 12: 'B-A'},
     (3, 4):
         {1: 'A-D,B-C',
          2: 'D-C,A-B',

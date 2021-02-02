@@ -1,0 +1,70 @@
+Baseball:
+  name: American League
+  season: 19xx
+  rotations: 22
+  results_file: ./mlb-al-19xx-results.txt
+
+  teams:
+    Boston Red Sox:
+      pitch: 4
+      relief: 3
+      field: 3
+      bat: 27
+      power: 4
+      speed: 1
+
+    Chicago White Sox:
+      pitch: 4
+      relief: 3
+      field: 3
+      bat: 28
+      power: 2
+      speed: 4
+
+    Cleveland Indians:
+      pitch: 3
+      relief: 3
+      field: 3
+      bat: 27
+      power: 2
+      speed: 2
+
+    Detroit Tigers:
+      pitch: 3
+      relief: 3
+      field: 3
+      bat: 28
+      power: 3
+      speed: 3
+
+    New York Yankees:
+      pitch: 4
+      relief: 3
+      field: 3
+      bat: 31
+      power: 5
+      speed: 2
+
+    Philadelphia Athletics:
+      pitch: 5
+      relief: 3
+      field: 3
+      bat: 24
+      power: 2
+      speed: 5
+
+    St Louis Browns:
+      pitch: 2
+      relief: 3
+      field: 3
+      bat: 25
+      power: 2
+      speed: 2
+
+    Washington Senators:
+      pitch: 5
+      relief: 3
+      field: 3
+      bat: 25
+      power: 3
+      speed: 3

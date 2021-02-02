@@ -11,6 +11,7 @@ import sys
 from benedict import benedict
 
 from association_football.association_football import AssociationFootballLeague
+from baseball.baseball import BaseballLeague
 from basketball.basketball import BasketballLeague
 from hockey.hockey import HockeyLeague
 
@@ -20,7 +21,8 @@ def play(params):
 
     {'association football': AssociationFootballLeague,
      'hockey': HockeyLeague,
-     'basketball': BasketballLeague
+     'basketball': BasketballLeague,
+     'baseball': BaseballLeague
      }[sport.lower()](**params[sport])
 
 

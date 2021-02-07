@@ -1,0 +1,35 @@
+Association Football:
+  name: English Premier League
+  season: 2019-20
+  avg_shots: 12.364   # per team per game
+  goal_pct: 0.11004   # per shot
+  home_adj: 1
+  rotations: 2
+  results_file: ./epl-2019-20-results.txt
+
+  teams:
+    Arsenal:
+      avg_shots_for: 10.68
+      goal_pct_for: 0.1379
+      avg_shots_against: 14.6
+      goal_pct_against: 0.0865
+
+  #Aston Villa	12.02631579	0.089715536	16	0.110197368
+  #Bournemouth	10.23684211	0.102827763	14.7	0.116362334
+  #Brighton and Hove Albion	12.15789474	0.084415584	13.1	0.1084773
+  #Burnley	10.18421053	0.111111111	14.2	0.092661231
+  #Chelsea	16.44736842	0.1104	8.5	0.167182663
+  #Crystal Palace	9.894736842	0.082446809	13.5	0.097465887
+  #Everton	12.34210526	0.093816631	11.2	0.131578947
+  #Leicester City	14.21052632	0.124074074	9.9	0.108984583
+  #Liverpool	15.55263158	0.143824027	9	0.096491228
+  #Manchester City	19.60526316	0.136912752	7.4	0.124466572
+  #Manchester United	14.31578947	0.121323529	10.3	0.091977517
+  #Newcastle United	10.5	0.095238095	14.9	0.102437301
+  #Norwich City	10.76315789	0.063569682	16	0.123355263
+  #Sheffield United	9.289473684	0.110481586	11.3	0.090824406
+  #Southampton	13.13157895	0.102204409	11.9	0.132684653
+  #Tottenham Hotspur	11.68421053	0.137387387	14.2	0.087101557
+  #Watford	11.15789474	0.08490566	13.1	0.128565689
+  #West Ham United	10.97368421	0.117505995	13.2	0.123604466
+  #Wolverhampton Wanderers	12.13157895	0.110629067	10.5	0.100250627

@@ -11,6 +11,7 @@ import sys
 from benedict import benedict
 
 from association_football.association_football import AssociationFootballLeague
+from chess.chess_tournament import ChessTournament
 from baseball.baseball import BaseballLeague
 from basketball.basketball import BasketballLeague
 from hockey.hockey import HockeyLeague
@@ -20,11 +21,11 @@ def play(params):
     sport = list(params.keys())[0]
 
     {'association football': AssociationFootballLeague,
-     'hockey': HockeyLeague,
+     'baseball': BaseballLeague,
      'basketball': BasketballLeague,
-     'baseball': BaseballLeague
+     'chess': ChessTournament,
+     'hockey': HockeyLeague,
      }[sport.lower()](**params[sport])
-
 
 
 if __name__ == '__main__':

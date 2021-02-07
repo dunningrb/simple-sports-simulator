@@ -30,7 +30,7 @@ class BaseballLeague(League):
 
         super(BaseballLeague, self).__init__(
             name=name, season=season, rotations=rotations, results_file=results_file,
-            teams=teams, teams_type=BaseballTeam
+            members=teams, member_type=BaseballTeam
         )
 
         self.home_adj = home_adj if home_adj is not None else 0
@@ -46,13 +46,13 @@ class BaseballLeague(League):
             return {'W': t.wins, 'L': t.losses, 'PCT': t.win_pct}
 
         return {k: v for k, v in
-                sorted({t: _sort_items(t) for t in self.teams.values()}.items(),
+                sorted({t: _sort_items(t) for t in self.members.values()}.items(),
                        key=lambda x: (x[1]['PCT'], x[1]['W'], -x[1]['L']),
                        reverse=True)}
 
     def print_standings(self):
         max_len = -1
-        for name in self.teams:
+        for name in self.members:
             max_len = max(max_len, len(name))
 
         table_cols = ['W', 'L', 'PCT', 'GB', 'RF', 'RA', 'RD']
@@ -146,8 +146,8 @@ class BaseballLeague(League):
 
         round_no = details['round-no']
         game_no = details['game-no']
-        home = self.teams[details['home-name']]
-        away = self.teams[details['away-name']]
+        home = self.members[details['home-name']]
+        away = self.members[details['away-name']]
 
         away_runs = _run_calc(batting=away, fielding=home)
         home_runs = _run_calc(batting=home, fielding=away)

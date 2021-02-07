@@ -19,10 +19,10 @@ class HockeyTeam(Team):
 
 class HockeyLeague(League):
     def __init__(self, *, name, season, home_adj=None, rotations, results_file, avg_shots,
-                 goal_pct, teams):
+                 goal_pct, members):
         super(HockeyLeague, self).__init__(
             name=name, season=season, rotations=rotations, results_file=results_file,
-            teams=teams, teams_type=HockeyTeam
+            members=members, member_type=HockeyTeam
         )
         self.avg_shots = avg_shots
         self.goal_pct = goal_pct
@@ -39,13 +39,13 @@ class HockeyLeague(League):
             return {'W': t.wins, 'L': t.losses, 'PTS': t.points, 'GD': t.score_diff}
 
         return {k: v for k, v in
-                sorted({t: _sort_items(t) for t in self.teams.values()}.items(),
+                sorted({t: _sort_items(t) for t in self.members.values()}.items(),
                        key=lambda x: (x[1]['PTS'], x[1]['W'], -x[1]['L'], x[1]['GD']),
                        reverse=True)}
     
     def print_standings(self):
         max_len = -1
-        for name in self.teams:
+        for name in self.members:
             max_len = max(max_len, len(name))
 
         table_cols = ['W', 'L', 'T', 'PTS', 'GF', 'GA', 'GD']
@@ -82,8 +82,8 @@ class HockeyLeague(League):
 
         round_no = details['round-no']
         game_no = details['game-no']
-        home = self.teams[details['home-name']]
-        away = self.teams[details['away-name']]
+        home = self.members[details['home-name']]
+        away = self.members[details['away-name']]
 
         # How many shots for each team?
         home_shots = resolve(self.avg_shots, home.avg_shots_for, away.avg_shots_against)

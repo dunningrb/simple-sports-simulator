@@ -1,0 +1,33 @@
+Chess:
+  name: Tournament of Legends
+  season: 2021
+  rotations: 2
+  results_file: ./chess-legends-results.txt
+
+  players:
+    Magnus Carlson:
+      elo: 2882
+    Gary Kasparov:
+      elo: 2851
+    Fabiano Caruana:
+      elo: 2844
+    Bobby Fischer:
+      elo: 2881
+    Mikhail Botvinnik:
+      elo: 2871
+    José Capablanca:
+      elo: 2866
+    Emanuel Lasker:
+      elo: 2863
+    Alexander Alekhine:
+      elo: 2851
+    Anatoly Karpov:
+      elo: 2829
+    Viswanathan Anand:
+      elo: 2833
+    Vladimir Kramnik:
+      elo: 2826
+    Wilhelm Steinitz:
+      elo: 2826
+    Paul Morphy:
+      elo: 2856

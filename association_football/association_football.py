@@ -21,7 +21,7 @@ class AssociationFootballLeague(League):
                  goal_pct, teams):
         super(AssociationFootballLeague, self).__init__(
             name=name, season=season, rotations=rotations, results_file=results_file,
-            teams=teams, teams_type=AssociationFootballClub
+            members=teams, member_type=AssociationFootballClub
         )
         self.avg_shots = avg_shots
         self.goal_pct = goal_pct
@@ -39,14 +39,14 @@ class AssociationFootballLeague(League):
 
         return {
             k: v for k, v in sorted(
-                {t: _sort_items(t) for t in self.teams.values()}.items(),
+                {t: _sort_items(t) for t in self.members.values()}.items(),
                 key=lambda x: (x[1]['PTS'], x[1]['W'], -x[1]['L'], x[1]['GD']), reverse=True
             )
         }
 
     def print_table(self):
         max_len = -1
-        for name in self.teams:
+        for name in self.members:
             max_len = max(max_len, len(name))
 
         table_cols = ['W', 'L', 'D', 'PTS', 'GF', 'GA', 'GD']
@@ -83,8 +83,8 @@ class AssociationFootballLeague(League):
 
         round_no = details['round-no']
         game_no = details['game-no']
-        home = self.teams[details['home-name']]
-        away = self.teams[details['away-name']]
+        home = self.members[details['home-name']]
+        away = self.members[details['away-name']]
 
         # How many shots for each team?
         home_shots = resolve(self.avg_shots, home.avg_shots_for, away.avg_shots_against)

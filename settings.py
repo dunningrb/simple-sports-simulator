@@ -70,7 +70,7 @@ SCHEDULE_TABLES = {
          7: 'D-N,E-C,F-B,G-A,H-M,I-L,J-K',
          8: 'N-K,L-J,M-I,A-H,B-G,C-F,D-E',
          9: 'E-N,F-D,G-C,H-B,I-A,J-M,K-L',
-         10: 'N-L,M-K,A-J,B-I C-H,D-G,E-F',
+         10: 'N-L,M-K,A-J,B-I,C-H,D-G,E-F',
          11: 'F-N,G-E,H-D,I-C,J-B,K-A,L-M',
          12: 'N-M,A-L,B-K,C-J,D-I,E-H,F-G',
          13: 'G-N,H-F,I-E,J-D,K-C,L-B,M-A'},

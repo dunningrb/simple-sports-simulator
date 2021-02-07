@@ -7,24 +7,24 @@ import settings
 
 class League:
 
-    def __init__(self, *, name, season, rotations, results_file, teams, teams_type):
+    def __init__(self, *, name, season, rotations, results_file, members=None, member_type):
         self.name = name
         self.season = season
         self.rotations = rotations
         self.results_file = results_file
-        self.teams = teams
-        self.teams_type = teams_type
+        self.members = members
+        self.member_type = member_type
         self.exit_options = ['Q', 'q']
         self.option_methods = {
             'Next Game Details': self.print_next_game,
             'Games This Round': self.print_games_this_round
         }
 
-        self.teams = {name: teams_type(name=name, **team) for name, team in teams.items()}
+        self.members = {name: member_type(name=name, **team) for name, team in members.items()}
 
-        self.teams = {
+        self.members = {
             k: v for k, v in sorted(
-                self.teams.items(), key=lambda item: item[1].name, reverse=False
+                self.members.items(), key=lambda item: item[1].name, reverse=False
             )
         }
 
@@ -34,14 +34,14 @@ class League:
 
     def build_results(self):
         schedule_map = dict()
-        num_teams = len(self.teams)
+        num_members = len(self.members)
 
-        if num_teams % 2 == 1:
-            key = (num_teams, num_teams + 1)
-            letter = ascii_uppercase[num_teams]
+        if num_members % 2 == 1:
+            key = (num_members, num_members + 1)
+            letter = ascii_uppercase[num_members]
             schedule_map[letter] = 'BYE'
         else:
-            key = (num_teams - 1, num_teams)
+            key = (num_members - 1, num_members)
 
         schedule_table = settings.SCHEDULE_TABLES[key]
         rounds_per_rotation = len(schedule_table)
@@ -49,7 +49,7 @@ class League:
         game_no = 0
 
         for rotation in range(self.rotations):
-            for (letter, team) in zip(letters, [t.name for t in self.teams.values()]):
+            for (letter, team) in zip(letters, [t.name for t in self.members.values()]):
                 schedule_map[letter] = team
 
             for round_base, pairings in schedule_table.items():
@@ -91,13 +91,11 @@ class League:
                 self.results[game_no]['home-score'] = home_score
                 self.results[game_no]['away-score'] = away_score
 
-                self.teams[home_name].update_results(
-                    game_id=game_no, opponent=away_name, score_for=home_score,
-                    score_against=away_score)
+                self.members[home_name].update_results(
+                    game_id=game_no, opponent=away_name, score_for=home_score, score_against=away_score)
 
-                self.teams[away_name].update_results(
-                    game_id=game_no, opponent=home_name, score_for=away_score,
-                    score_against=home_score)
+                self.members[away_name].update_results(
+                    game_id=game_no, opponent=home_name, score_for=away_score, score_against=home_score)
 
     def next_game_details(self):
         for game_no, details in self.results.items():

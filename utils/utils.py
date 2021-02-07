@@ -1,8 +1,9 @@
 import os
+import math
 
 
 def resolve(lg_rt, t1_rt, t2_rt):
-    return lg_rt + (t1_rt + t2_rt - 2 * lg_rt)
+    return lg_rt + (t1_rt + t2_rt - 2 * lg_rt) / math.sqrt(2)
 
 
 def rand():

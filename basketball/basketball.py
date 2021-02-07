@@ -32,11 +32,11 @@ class BasketballTeam(Team):
 
 
 class BasketballLeague(League):
-    def __init__(self, *, name, season, rotations, results_file, teams, a3p, p3p, a2p, p2p, aft, 
+    def __init__(self, *, name, season, rotations, results_file, teams, a3p, p3p, a2p, p2p, aft,
                  pft, home_a3p_adj=None, home_a2p_adj=None, home_aft_adj=None):
         super(BasketballLeague, self).__init__(
             name=name, season=season, rotations=rotations, results_file=results_file,
-            teams=teams, teams_type=BasketballTeam
+            members=teams, member_type=BasketballTeam
         )
         self.a3p = a3p
         self.p3p = p3p
@@ -59,13 +59,13 @@ class BasketballLeague(League):
             return {'W': t.wins, 'L': t.losses, 'PCT': t.win_pct}
 
         return {k: v for k, v in
-                sorted({t: _sort_items(t) for t in self.teams.values()}.items(),
+                sorted({t: _sort_items(t) for t in self.members.values()}.items(),
                        key=lambda x: (x[1]['PCT'], x[1]['W'], -x[1]['L']),
                        reverse=True)}
         
     def print_standings(self):
         max_len = -1
-        for name in self.teams:
+        for name in self.members:
             max_len = max(max_len, len(name))
 
         table_cols = ['W', 'L', 'PCT', 'GB', 'PF', 'PA', 'PD']
@@ -115,8 +115,8 @@ class BasketballLeague(League):
 
         round_no = details['round-no']
         game_no = details['game-no']
-        home = self.teams[details['home-name']]
-        away = self.teams[details['away-name']]
+        home = self.members[details['home-name']]
+        away = self.members[details['away-name']]
 
         # How many 3-point attempts for each team?
         home_3pa = resolve(self.a3p, home.a3p_for, away.a3p_against)

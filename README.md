@@ -2,7 +2,16 @@
 A Python package for simple simulations of various sports leagues.
 This is a toy project I created for fun.
 
-#### Basic Idea
+### Running the Simulation
+
+If running on Windows: 
+    * Edit settings.py to get the correct path strings for Windows.
+
+Open a command-line terminal and run the following command:
+
+    $> python runner.py
+
+### Basic Idea
 
 The Simple Sports Simulator simulates matches between competitors
 in various sports leagues, such as soccer (association football),
@@ -139,7 +148,7 @@ wiffle ball than baseball. Improvements are in the works.
 The chess model will be based entire on ELO ratings, and for a given
 match will determine the winner, loser, or a draw.
 
-#### Simulating a League
+### Simulating a League
 
 To simulate a league requires a YAML file with input values for the
 league averages and for the individual teams. In all cases, in the
@@ -149,6 +158,45 @@ there are no divisions or conferences.
 
 Some example YAML files are available in the repo.
 
-#### Example Simulation
+### Example Simulation
 
-As an example simulation, consider 
+As an example simulation, consider the 1962-63 National Hockey League
+season. We choose this season because it is part of the "Original 6"
+era of the NHL in which the league had no divisions. Each team played
+the other five teams 14 games each, for a total of 70 games. This will
+allow a nearly-direct comparison of the simulation results to the final
+league standings.
+
+    1962-63 National Hockey League: Actual
+    Pos    Team                  W    L    T    PTS    GF    GA    GD    
+    ---------------------------------------------------------------------
+    1      Toronto Maple Leafs   35   23   12   82     221   180   41     
+    2      Chicago Black Hawks   32   21   17   81     194   178   16      
+    3      Montreal Canadiens    28   19   23   79     225   183   42     
+    4      Detroit Red Wings     32   25   13   77     200   194   6     
+    5      New York Rangers      22   36   12   56     211   233  -22    
+    6      Boston Bruins         14   39   17   45     198   281  -83
+
+    1962-63 National Hockey League: Simulated
+    Pos    Team                  W    L    T    PTS    GF    GA    GD    
+    ---------------------------------------------------------------------
+    1      Toronto Maple Leafs   42   20   8    92     248   190   58     
+    2      Chicago Black Hawks   30   21   19   79     185   177   8      
+    3      Montreal Canadiens    31   29   10   72     219   191   28     
+    4      Detroit Red Wings     26   29   15   67     187   194  -7     
+    5      New York Rangers      23   34   13   59     197   217  -20    
+    6      Boston Bruins         21   40   9    51     191   258  -67
+
+Given the simplicity of the underlying model, these results are very good.
+
+### Future Work
+
+    * The baseball simulation needs a lot work, perhaps a complete refactor.
+    * The ability to import a schedule, and divide a league into sub-leagues and divisions.
+    * The ability to define a post-season qualification.
+    * Simulating post-season series.
+    * Adding additional sports.
+
+### Copyright
+
+Copyright (c) 2021 Rodney Dunning. All rights reserved.

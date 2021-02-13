@@ -19,10 +19,10 @@ class HockeyTeam(Team):
 
 class HockeyLeague(League):
     def __init__(self, *, name, season, home_adj=None, rotations, results_file, avg_shots,
-                 goal_pct, members):
+                 goal_pct, teams):
         super(HockeyLeague, self).__init__(
             name=name, season=season, rotations=rotations, results_file=results_file,
-            members=members, member_type=HockeyTeam
+            members=teams, member_type=HockeyTeam
         )
         self.avg_shots = avg_shots
         self.goal_pct = goal_pct

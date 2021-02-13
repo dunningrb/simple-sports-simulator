@@ -20,6 +20,8 @@ from hockey.hockey import HockeyLeague
 def play(params):
     sport = list(params.keys())[0]
 
+    print(f'sport: {sport}')
+
     {'association football': AssociationFootballLeague,
      'baseball': BaseballLeague,
      'basketball': BasketballLeague,

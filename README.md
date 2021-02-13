@@ -205,4 +205,4 @@ Given the simplicity of the underlying model, these results are very good.
 
 ### Copyright
 
-Copyright (c) 2021 Rodney Dunning. All rights reserved.
+Copyright (c) by 2021 Rodney Dunning. All rights reserved.

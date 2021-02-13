@@ -4,12 +4,18 @@ This is a toy project I created for fun.
 
 ### Running the Simulation
 
-If running on Windows: 
-    * Edit settings.py to get the correct path strings for Windows.
+    1. Open a command-line session.
+    2. Cd to the directory where you have cloned this project.
+    3. Activate your virtual environment.
+    4. If running on Windows: Edit settings.py to get the correct path strings for Windows.
+    5. Run: pip install -r requirements.txt
+    6. Run: python runner.py epl-2020-21.yaml   [or, python3]
+    7. You should see the simulation menu. Choose options at will.
 
-Open a command-line terminal and run the following command:
-
-    $> python runner.py
+For a given simulation, a results.txt file is created in the repository
+root directory. This fill is read by the simulation when you restart
+the program. If you want to begin a simulation from scratch, either
+rename or delete the associated results.txt file.
 
 ### Basic Idea
 
